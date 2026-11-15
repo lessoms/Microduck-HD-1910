@@ -13,6 +13,9 @@ dependencies = [
   "mujoco==3.10.0",
   "mujoco-warp==3.8.1",
   "numpy==2.4.1",
+  "imageio==2.38.1",
+  "imageio-ffmpeg==0.8.1",
+  "pillow==13.0.0",
   "scipy>=1.16",
   "better-actuator-models",
 ]

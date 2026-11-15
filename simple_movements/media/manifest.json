@@ -1,0 +1,79 @@
+{
+  "source": "Actual packaged-policy MuJoCo rollouts; not physical robot footage",
+  "seed": 20261111,
+  "mp4_fps": 25,
+  "gif_fps": 20,
+  "playback_speed": 1,
+  "clips": [
+    {
+      "skill": "walking",
+      "label": "行走",
+      "duration_s": 7.0,
+      "gif_frames": 140,
+      "gif_size": [
+        480,
+        360
+      ],
+      "gif_bytes": 5164773,
+      "mp4_bytes": 1081314,
+      "final_state": "standing",
+      "reset_count": 1
+    },
+    {
+      "skill": "turning",
+      "label": "转弯",
+      "duration_s": 7.0,
+      "gif_frames": 140,
+      "gif_size": [
+        480,
+        360
+      ],
+      "gif_bytes": 3453033,
+      "mp4_bytes": 946060,
+      "final_state": "standing",
+      "reset_count": 1
+    },
+    {
+      "skill": "backward",
+      "label": "倒退",
+      "duration_s": 7.0,
+      "gif_frames": 140,
+      "gif_size": [
+        480,
+        360
+      ],
+      "gif_bytes": 5161099,
+      "mp4_bytes": 1206569,
+      "final_state": "standing",
+      "reset_count": 1
+    },
+    {
+      "skill": "sitstand",
+      "label": "坐下与起立",
+      "duration_s": 9.8,
+      "gif_frames": 196,
+      "gif_size": [
+        480,
+        360
+      ],
+      "gif_bytes": 1953511,
+      "mp4_bytes": 658849,
+      "final_state": "standing",
+      "reset_count": 1
+    },
+    {
+      "skill": "roulade",
+      "label": "前滚翻与起身",
+      "duration_s": 10.8,
+      "gif_frames": 216,
+      "gif_size": [
+        480,
+        360
+      ],
+      "gif_bytes": 2926853,
+      "mp4_bytes": 996351,
+      "final_state": "standing",
+      "reset_count": 1
+    }
+  ]
+}

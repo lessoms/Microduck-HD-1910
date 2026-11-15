@@ -6,6 +6,20 @@
 
 这里的“整合”是**控制器在多个独立策略之间进行状态管理和动作渐变交接**，没有把所有模型权重合成一个网络。所有下述成绩均来自仿真；当前记录未完成真实机器人验收。
 
+## 动作演示（MuJoCo 仿真）
+
+以下五段由仓库中的最终模型实际驱动物理仿真录制，均为原速播放：速度420轮、坐站120轮、前滚翻380轮。每段独立运行，包含动作及停止/恢复过程；不是实机拍摄。GIF用于直接预览，MP4保留640×480、25fps原视频。
+
+| 行走 | 转弯 |
+| --- | --- |
+| **行走**<br>![行走：MuJoCo 实际策略运行](media/gifs/walking.gif)<br>[MP4 原视频](media/videos/walking.mp4) | **转弯**<br>![转弯：MuJoCo 实际策略运行](media/gifs/turning.gif)<br>[MP4 原视频](media/videos/turning.mp4) |
+| 倒退 | 坐下与起立 |
+| **倒退**<br>![倒退：MuJoCo 实际策略运行](media/gifs/backward.gif)<br>[MP4 原视频](media/videos/backward.mp4) | **坐下与起立**<br>![坐下与起立：MuJoCo 实际策略运行](media/gifs/sitstand.gif)<br>[MP4 原视频](media/videos/sitstand.mp4) |
+| 前滚翻与起身 | |
+| **前滚翻与起身**<br>![前滚翻与起身：MuJoCo 实际策略运行](media/gifs/roulade.gif)<br>[MP4 原视频](media/videos/roulade.mp4) | |
+
+录制方式及逐段报告见 [media/README.md](media/README.md)。
+
 ## 1. 整体实现路线
 
 | 阶段 | 要解决的问题 | 实际实现 | 阶段结果 |
