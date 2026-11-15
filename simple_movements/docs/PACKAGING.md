@@ -36,3 +36,5 @@ MUJOCO_GL=egl bash test_handoffs.sh
 - 依赖核对中发现mjviser新版会引入mujoco-core4.0.1，已固定原环境的mjviser0.0.14、viser1.0.30及tensordict0.10.0，避免额外MuJoCo核心。
 
 机器可读汇总见 `../validation/packaging_summary.json`。
+
+最终锁文件已从空 `.venv` 安装验证：从 `/tmp` 调用本包默认入口，完整组合33.0秒完成、最终standing、仅初始reset一次。报告见 `../validation/fresh_environment_combined.json`。该验证没有使用原训练虚拟环境或原工作区源码。

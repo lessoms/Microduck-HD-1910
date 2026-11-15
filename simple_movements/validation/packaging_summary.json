@@ -237,6 +237,14 @@
   },
   "seed": 20261111,
   "environment": "Existing Python 3.12/CUDA environment with all local modules resolved from this package",
-  "fresh_environment_validation": "pending dependency installation",
+  "fresh_environment_validation": {
+    "passed": true,
+    "method": "Removed the temporary .venv and installed from final uv.lock with uv sync --frozen; invoked run.sh from /tmp using its default .venv interpreter",
+    "combined_report": "fresh_environment_combined.json",
+    "state": "standing",
+    "elapsed_s": 33.0,
+    "reset_count": 1,
+    "demo_complete": true
+  },
   "gui_validation": "not run (headless tests only)"
 }

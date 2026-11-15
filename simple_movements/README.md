@@ -295,6 +295,8 @@ simple_movements/
 
 `models/manifest.json` 记录源检查点哈希、轮次、推理文件哈希与引用轨迹。导出只保留 actor 和播放配置，移除世界模型、critic、优化器及训练 replay；actor 参数逐张量保持一致，未量化或重新训练。这些是可运行模型，不是 Git LFS 指针，也不是完整续训检查点。多策略交接逻辑保持原控制器行为。
 
+本包已在按锁文件从空环境安装后，通过33.0秒连续组合动作测试（仅初始reset一次），详见 [验证报告](validation/fresh_environment_combined.json)。
+
 本包面向最终仿真演示；历史训练入口、旧中间检查点及完整训练数据不包含在运行依赖中。下文历史路径及归档文档中的绝对路径用于追溯原工作区，不是本包运行入口。原始 README 完整副本见 [docs/history/README.md](docs/history/README.md)，打包变更和验证见 [PACKAGING.md](docs/PACKAGING.md)。
 
 ## 8. 从开始到现在，能力与剩余问题
