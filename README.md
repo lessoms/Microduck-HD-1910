@@ -12,7 +12,7 @@ bash run.sh
 
 ## 动作演示（MuJoCo 仿真）
 
-以下五段由仓库中的最终模型实际驱动物理仿真录制，均为原速播放：速度420轮、坐站120轮、前滚翻380轮。每段独立运行，包含动作及停止/恢复过程；不是实机拍摄。GIF用于直接预览，MP4保留640×480、25fps原视频。
+以下展示最终模型的行走、转弯、倒退、坐下起立和前滚翻能力。画面为 MuJoCo 仿真，GIF 下方可查看 MP4 原视频。
 
 | 行走 | 转弯 |
 | --- | --- |
@@ -22,4 +22,4 @@ bash run.sh
 | 前滚翻与起身 | |
 | **前滚翻与起身**<br>![前滚翻与起身：MuJoCo 实际策略运行](simple_movements/media/gifs/roulade.gif)<br>[MP4 原视频](simple_movements/media/videos/roulade.mp4) | |
 
-[录制方法与验证记录](simple_movements/media/README.md) · [完整训练与实现历程](simple_movements/README.md)
+[完整训练与实现历程](simple_movements/README.md)
