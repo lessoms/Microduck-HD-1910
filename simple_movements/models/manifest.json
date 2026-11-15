@@ -1,0 +1,51 @@
+{
+  "format": "supermimic_inference_v1",
+  "note": "Actor-only exports; no training replay, optimizer, world model or critic. Original actor tensors unchanged.",
+  "models": [
+    {
+      "name": "velocity_0420",
+      "round": 420,
+      "architecture": "old_aligned_velocity_v1",
+      "source_checkpoint": "Control/head_pose_finetune_v2/short_train/checkpoint_0420.pt",
+      "source_sha256": "d3fc0881897faa38b63a608872ce298b3df42be6c201c30cc4c6b40f55a527a4",
+      "model": "models/velocity_0420.pt",
+      "model_sha256": "60d36650ef4c146c34585ae1b69afa289c5593e371b27d51bf3d89ad9300d5df",
+      "model_bytes": 29910854,
+      "reference": "references/velocity_0420.npz",
+      "reference_sha256": "54733b456fd8d99c626ed97471047cc9cdfbbf1e96a98ed854f2eb5b1543bbd1",
+      "parameter_tensors": 21,
+      "tensor_equality": true,
+      "cpu_forward_max_abs_error": 0.0
+    },
+    {
+      "name": "sitstand_0120",
+      "round": 120,
+      "architecture": "old_aligned_v1",
+      "source_checkpoint": "runs/hd1910_sitstand_stall_150/joint_from_actor1250/checkpoint_0120.pt",
+      "source_sha256": "c41d5a87c66fb4646c9ed88c078a2cdb0de5b00766b42f7b39c599a993556ef4",
+      "model": "models/sitstand_0120.pt",
+      "model_sha256": "3b3d162e7522499249b98d3afc2bd8aea7eecf005a31954d6c297a5b590ddb02",
+      "model_bytes": 29908806,
+      "reference": "references/sitstand_0120.npz",
+      "reference_sha256": "1a2920463d2fede8c7a95e5b782cf8195145739a1623b49647be40dc29b8f635",
+      "parameter_tensors": 21,
+      "tensor_equality": true,
+      "cpu_forward_max_abs_error": 0.0
+    },
+    {
+      "name": "roulade_0380",
+      "round": 380,
+      "architecture": "old_aligned_v1",
+      "source_checkpoint": "experiments/teacher64000_latest/roulade/joint_300to400/checkpoint_0380.pt",
+      "source_sha256": "59015fd2c52a926a27c41a0e545d71166b15daac21c958209ce2967f97f04bb3",
+      "model": "models/roulade_0380.pt",
+      "model_sha256": "995b78c48b49d398401f6d7d741d8dc6f5cc58cd2a5018c85aca6393889f227b",
+      "model_bytes": 29908907,
+      "reference": "references/roulade_0380.npz",
+      "reference_sha256": "59ab53b6094400ea75c041fc7c83d53143f4791e8d705af11dcea74722489c1a",
+      "parameter_tensors": 21,
+      "tensor_equality": true,
+      "cpu_forward_max_abs_error": 0.0
+    }
+  ]
+}

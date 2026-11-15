@@ -1,0 +1,143 @@
+{
+  "passed": true,
+  "state": "standing",
+  "reset_count": 1,
+  "elapsed_s": 40.9,
+  "events": [
+    {
+      "time_s": 0.0,
+      "event": "reset",
+      "state": "standing"
+    },
+    {
+      "time_s": 1.0,
+      "event": "velocity_enter",
+      "state": "velocity_preparing"
+    },
+    {
+      "time_s": 1.0,
+      "event": "velocity_command",
+      "state": "velocity_preparing",
+      "vx": 0.15,
+      "wz": 0.0
+    },
+    {
+      "time_s": 3.0,
+      "event": "velocity_ready",
+      "state": "walking"
+    },
+    {
+      "time_s": 5.4,
+      "event": "velocity_command",
+      "state": "velocity_stopping",
+      "vx": 0.0,
+      "wz": 0.0
+    },
+    {
+      "time_s": 5.4,
+      "event": "queued_after_stop",
+      "state": "velocity_stopping",
+      "command": "sit"
+    },
+    {
+      "time_s": 7.4,
+      "event": "velocity_stopped",
+      "state": "velocity_stopping",
+      "distance_m": 0.24137161672115326,
+      "peak_planar_speed": 0.16904094815254211
+    },
+    {
+      "time_s": 10.4,
+      "event": "handoff_complete",
+      "state": "standing",
+      "joint_pose_rms_rad": 0.03911187872290611
+    },
+    {
+      "time_s": 10.4,
+      "event": "accepted",
+      "state": "sitting_down",
+      "command": "sit"
+    },
+    {
+      "time_s": 12.4,
+      "event": "completed",
+      "state": "sitting",
+      "motion": "sitting_down"
+    },
+    {
+      "time_s": 13.4,
+      "event": "accepted",
+      "state": "standing_up",
+      "command": "stand"
+    },
+    {
+      "time_s": 18.3,
+      "event": "completed",
+      "state": "standing",
+      "motion": "standing_up"
+    },
+    {
+      "time_s": 19.3,
+      "event": "velocity_enter",
+      "state": "velocity_preparing"
+    },
+    {
+      "time_s": 19.3,
+      "event": "velocity_command",
+      "state": "velocity_preparing",
+      "vx": 0.0,
+      "wz": 0.5
+    },
+    {
+      "time_s": 21.3,
+      "event": "velocity_ready",
+      "state": "walking"
+    },
+    {
+      "time_s": 23.7,
+      "event": "velocity_command",
+      "state": "velocity_stopping",
+      "vx": 0.0,
+      "wz": 0.0
+    },
+    {
+      "time_s": 23.7,
+      "event": "queued_after_stop",
+      "state": "velocity_stopping",
+      "command": "roll"
+    },
+    {
+      "time_s": 25.7,
+      "event": "velocity_stopped",
+      "state": "velocity_stopping",
+      "distance_m": 0.01999598741531372,
+      "peak_planar_speed": 0.07536778599023819
+    },
+    {
+      "time_s": 28.8,
+      "event": "handoff_complete",
+      "state": "standing",
+      "joint_pose_rms_rad": 0.030622731894254684
+    },
+    {
+      "time_s": 28.8,
+      "event": "accepted",
+      "state": "roll_preparing",
+      "command": "roll"
+    },
+    {
+      "time_s": 30.8,
+      "event": "prepared",
+      "state": "rolling",
+      "joint_pose_rms_rad": 0.0404096357524395
+    },
+    {
+      "time_s": 37.9,
+      "event": "completed",
+      "state": "standing",
+      "motion": "rolling"
+    }
+  ],
+  "velocity_checkpoint": "/home/zhichao/supermimic/Control/head_pose_finetune_v2/short_train/checkpoint_0420.pt",
+  "velocity_checkpoint_sha256": "d3fc0881897faa38b63a608872ce298b3df42be6c201c30cc4c6b40f55a527a4"
+}

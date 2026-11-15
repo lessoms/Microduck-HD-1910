@@ -1,0 +1,28 @@
+{
+  "enabled": true,
+  "sampling_enabled": true,
+  "mode": "explicit_parameters_only",
+  "foot_sliding_friction_range": [
+    0.5,
+    1.2
+  ],
+  "joint_observation_bias_rad_range": [
+    -0.01,
+    0.01
+  ],
+  "trunk_com_offset_m_range": [
+    -0.002,
+    0.002
+  ],
+  "episode_lifetime": "parameters applied on reset and held until next reset",
+  "sensor_noise": "disabled; future per-frame noise must be separate from episode bias",
+  "com_model": "translate trunk inertial center; keep mass, principal inertia and principal-axis orientation unchanged",
+  "context_order": [
+    "foot_sliding_friction",
+    "14 joint biases in policy order",
+    "trunk COM local offset xyz"
+  ],
+  "context_dimension": 18,
+  "sampling_driver": "src/microduck_sm/environment.py:TrainingEnvironment.reset",
+  "sampling_policy": "Independent uniform per episode; opt-in collector only; completed budget stops automatically"
+}

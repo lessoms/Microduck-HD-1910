@@ -1,0 +1,422 @@
+{
+  "upstream_commit": "11a7b64aa7f89ab38e9e96c8e39968f25d15d48b",
+  "model": "robot_walk.xml",
+  "joints": [
+    {
+      "index": 0,
+      "name": "left_hip_yaw",
+      "default_rad": 0.0,
+      "limits_rad": [
+        -0.4363323129985824,
+        0.5235987755982988
+      ],
+      "limited": true
+    },
+    {
+      "index": 1,
+      "name": "left_hip_roll",
+      "default_rad": -0.0873,
+      "limits_rad": [
+        -0.3839724354387525,
+        0.3839724354387525
+      ],
+      "limited": true
+    },
+    {
+      "index": 2,
+      "name": "left_hip_pitch",
+      "default_rad": -0.4579,
+      "limits_rad": [
+        -1.570796326795005,
+        1.5707963267947882
+      ],
+      "limited": true
+    },
+    {
+      "index": 3,
+      "name": "left_knee",
+      "default_rad": -0.0049,
+      "limits_rad": [
+        -1.570796326795012,
+        1.570796326794781
+      ],
+      "limited": true
+    },
+    {
+      "index": 4,
+      "name": "left_ankle",
+      "default_rad": 0.453,
+      "limits_rad": [
+        -1.5707963267949019,
+        1.5707963267948912
+      ],
+      "limited": true
+    },
+    {
+      "index": 5,
+      "name": "neck_pitch",
+      "default_rad": 0.3491,
+      "limits_rad": [
+        -1.5707963267948966,
+        1.0471975511965976
+      ],
+      "limited": true
+    },
+    {
+      "index": 6,
+      "name": "head_pitch",
+      "default_rad": 0.3491,
+      "limits_rad": [
+        -1.5707963267948974,
+        1.5707963267948957
+      ],
+      "limited": true
+    },
+    {
+      "index": 7,
+      "name": "head_yaw",
+      "default_rad": 0.0,
+      "limits_rad": [
+        -2.967059728390373,
+        2.967059728390348
+      ],
+      "limited": true
+    },
+    {
+      "index": 8,
+      "name": "head_roll",
+      "default_rad": 0.0,
+      "limits_rad": [
+        -0.43633231299859127,
+        0.4363323129985735
+      ],
+      "limited": true
+    },
+    {
+      "index": 9,
+      "name": "right_hip_yaw",
+      "default_rad": 0.0,
+      "limits_rad": [
+        -0.5235987755982988,
+        0.4363323129985824
+      ],
+      "limited": true
+    },
+    {
+      "index": 10,
+      "name": "right_hip_roll",
+      "default_rad": 0.0873,
+      "limits_rad": [
+        -0.3839724354387525,
+        0.3839724354387525
+      ],
+      "limited": true
+    },
+    {
+      "index": 11,
+      "name": "right_hip_pitch",
+      "default_rad": 0.4579,
+      "limits_rad": [
+        -1.5707963267949268,
+        1.5707963267948664
+      ],
+      "limited": true
+    },
+    {
+      "index": 12,
+      "name": "right_knee",
+      "default_rad": 0.0049,
+      "limits_rad": [
+        -1.570796326794932,
+        1.570796326794861
+      ],
+      "limited": true
+    },
+    {
+      "index": 13,
+      "name": "right_ankle",
+      "default_rad": -0.453,
+      "limits_rad": [
+        -1.5707963267949054,
+        1.5707963267948877
+      ],
+      "limited": true
+    }
+  ],
+  "raw_xml_total_mass_kg": 0.7372431799999999,
+  "bodies": [
+    {
+      "name": "trunk_base",
+      "mass_kg": 0.199224,
+      "com_local_m": [
+        -0.0226332,
+        -2.70828e-05,
+        0.00280064
+      ],
+      "principal_inertia_kg_m2": [
+        0.00014593161399370665,
+        0.000140798871912458,
+        9.852651409383544e-05
+      ]
+    },
+    {
+      "name": "yaw2roll",
+      "mass_kg": 0.0230406,
+      "com_local_m": [
+        -8.8e-11,
+        0.00099414,
+        0.0168917
+      ],
+      "principal_inertia_kg_m2": [
+        4.1964e-06,
+        3.4198877566766147e-06,
+        2.3241322433233854e-06
+      ]
+    },
+    {
+      "name": "hip_l",
+      "mass_kg": 0.00618934,
+      "com_local_m": [
+        0.014815,
+        1.6179e-08,
+        -0.00829992
+      ],
+      "principal_inertia_kg_m2": [
+        1.159755603719869e-06,
+        1.1575300000024421e-06,
+        3.5245839627768903e-07
+      ]
+    },
+    {
+      "name": "upper_leg_left",
+      "mass_kg": 0.0482067,
+      "com_local_m": [
+        0.006766,
+        0.0228838,
+        0.0134531
+      ],
+      "principal_inertia_kg_m2": [
+        1.9845265956057494e-05,
+        1.9108041962471662e-05,
+        8.117992081470831e-06
+      ]
+    },
+    {
+      "name": "leg",
+      "mass_kg": 0.0215844,
+      "com_local_m": [
+        -1.52e-10,
+        0.0318937,
+        -0.00953505
+      ],
+      "principal_inertia_kg_m2": [
+        5.25056e-06,
+        4.580536622760802e-06,
+        1.913783377239199e-06
+      ]
+    },
+    {
+      "name": "ankle_left",
+      "mass_kg": 0.0300246,
+      "com_local_m": [
+        -0.00615738,
+        -0.0137483,
+        -0.0156586
+      ],
+      "principal_inertia_kg_m2": [
+        1.1162273349969178e-05,
+        7.743185360670357e-06,
+        5.903341289360453e-06
+      ]
+    },
+    {
+      "name": "neck",
+      "mass_kg": 0.0368414,
+      "com_local_m": [
+        0.0,
+        -0.025,
+        0.0141665
+      ],
+      "principal_inertia_kg_m2": [
+        1.72925e-05,
+        1.63707e-05,
+        3.12694e-06
+      ]
+    },
+    {
+      "name": "neck_pitch",
+      "mass_kg": 0.00572,
+      "com_local_m": [
+        -6.533e-09,
+        0.0116641,
+        -0.0145
+      ],
+      "principal_inertia_kg_m2": [
+        1.09186e-06,
+        9.66855e-07,
+        5.12111e-07
+      ]
+    },
+    {
+      "name": "yaw_roll_motion",
+      "mass_kg": 0.0486,
+      "com_local_m": [
+        -0.000166657,
+        -0.00500964,
+        0.0178065
+      ],
+      "principal_inertia_kg_m2": [
+        9.655117695766666e-06,
+        8.11787739625905e-06,
+        6.887804907974275e-06
+      ]
+    },
+    {
+      "name": "jaw_soft",
+      "mass_kg": 0.188766,
+      "com_local_m": [
+        0.00460523,
+        0.00120047,
+        -0.0324761
+      ],
+      "principal_inertia_kg_m2": [
+        0.0003210675976941666,
+        0.00025426573598788586,
+        0.00014946066631794764
+      ]
+    },
+    {
+      "name": "bearing_roll",
+      "mass_kg": 0.0230406,
+      "com_local_m": [
+        -8.8e-11,
+        0.00099414,
+        0.0168917
+      ],
+      "principal_inertia_kg_m2": [
+        4.1964e-06,
+        3.4198877566766147e-06,
+        2.3241322433233854e-06
+      ]
+    },
+    {
+      "name": "hip_l_2",
+      "mass_kg": 0.00618934,
+      "com_local_m": [
+        0.014815,
+        1.6212e-08,
+        -0.00829992
+      ],
+      "principal_inertia_kg_m2": [
+        1.159755603719869e-06,
+        1.1575300000024421e-06,
+        3.5245839627768903e-07
+      ]
+    },
+    {
+      "name": "upper_leg_right",
+      "mass_kg": 0.0482067,
+      "com_local_m": [
+        -0.006766,
+        0.0228838,
+        0.0134531
+      ],
+      "principal_inertia_kg_m2": [
+        1.9845265956057494e-05,
+        1.9108041962471662e-05,
+        8.117992081470831e-06
+      ]
+    },
+    {
+      "name": "leg_2",
+      "mass_kg": 0.0215844,
+      "com_local_m": [
+        -0.0318937,
+        -1.52e-10,
+        -0.00953505
+      ],
+      "principal_inertia_kg_m2": [
+        5.25056e-06,
+        4.580536622760802e-06,
+        1.913783377239199e-06
+      ]
+    },
+    {
+      "name": "ankle_right",
+      "mass_kg": 0.0300251,
+      "com_local_m": [
+        0.00615539,
+        -0.0137482,
+        -0.0156566
+      ],
+      "principal_inertia_kg_m2": [
+        1.1162245904558893e-05,
+        7.743216094205062e-06,
+        5.90343800123603e-06
+      ]
+    }
+  ],
+  "foot_geoms": [
+    {
+      "name": "left_foot_collision",
+      "type": 7,
+      "size": [
+        0.006787960776309599,
+        0.02174142665451742,
+        0.027229970684708008
+      ],
+      "friction": [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      "contype": 1,
+      "conaffinity": 1
+    },
+    {
+      "name": "right_foot_collision",
+      "type": 7,
+      "size": [
+        0.006788012574034744,
+        0.021741484734262538,
+        0.027229830271888446
+      ],
+      "friction": [
+        1.0,
+        0.005,
+        0.0001
+      ],
+      "contype": 1,
+      "conaffinity": 1
+    }
+  ],
+  "task_decimation": 4,
+  "task_simulation_config": "SimulationCfg(nconmax=35, njmax=1500, ls_parallel=True, contact_sensor_maxmatch=64, mujoco=MujocoCfg(timestep=0.005, integrator='implicitfast', impratio=1.0, cone='pyramidal', jacobian='auto', solver='newton', iterations=10, tolerance=1e-08, ls_iterations=20, ls_tolerance=0.01, ccd_iterations=50, gravity=(0.0, 0.0, -9.81), disableflags=(), enableflags=()), nan_guard=NanGuardCfg(enabled=False, buffer_size=100, output_dir='/tmp/mjlab/nan_dumps', max_envs_to_dump=5))",
+  "action_config": "{'joint_pos': JointPositionActionCfg(entity_name='robot', clip=None, transmission_type=<TransmissionType.JOINT: 'joint'>, actuator_names=('.*',), scale=1.0, offset=0.0, preserve_order=False, use_default_offset=True)}",
+  "collision_overrides": "(CollisionCfg(geom_names_expr=['.*_collision'], contype=1, conaffinity=1, condim={'^(left|right)_foot_collision$': 3, '.*_collision': 1}, priority={'^(left|right)_foot_collision$': 1}, friction={'^(left|right)_foot_collision$': (1.0,)}, solref=None, solimp=None, margin=None, gap=None, solmix=None, disable_other_geoms=True),)",
+  "bam_config": "(FeetechBamActuatorCfg(target_names_expr=('^(?!passive_).*',), transmission_type=<TransmissionType.JOINT: 'joint'>, armature=None, frictionloss=None, viscous_damping=None, delay_min_lag=3, delay_max_lag=6, delay_hold_prob=0.0, delay_update_period=0, delay_per_env_phase=True, motor_name=None, model=None, json_path='/home/zhichao/supermimic/third_party/microduck-replica/software/training/src/mjlab_microduck/robot/hd1910/1910_m6.json', vin=None, kp_fw=5.0, vin_range=(7.4, 8.0), vin_drop_gain_range=(0.0, 0.2), vin_min=7.0, stiff_frictionloss=True),)",
+  "bam_parameters": {
+    "kt": 0.6237611235393989,
+    "error_gain_ratio": 1.321738701681577,
+    "R": 4.910191564179625,
+    "armature": 0.0017819049974475338,
+    "q_offset": 0.032748109622048015,
+    "command_delay": 0.006005265953265889,
+    "friction_base": 0.015803365327573492,
+    "friction_stribeck": 0.009590058942953754,
+    "load_friction_motor": 0.06851344455161522,
+    "load_friction_external": 0.15822186020023804,
+    "load_friction_motor_stribeck": 0.12202539397513879,
+    "load_friction_external_stribeck": 0.07862542939514451,
+    "load_friction_motor_quad": 0.001967982142115035,
+    "load_friction_external_quad": 0.0008854091803780388,
+    "dtheta_stribeck": 0.946465692532126,
+    "alpha": 1.5220506664931566,
+    "friction_viscous": 0.0003101648214055195,
+    "max_velocity": 100.0,
+    "model": "m6",
+    "actuator": "sts3215"
+  },
+  "bam_sha256": "ef2d51adfb1cc0831b9b02ca19aa9176fceecdf725148d084378d7d9a64afceb",
+  "caveat": "Raw XML inertial/geom fields precede Entity collision and BAM overrides. Hardware agreement unverified."
+}

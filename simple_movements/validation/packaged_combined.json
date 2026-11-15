@@ -1,0 +1,92 @@
+{
+  "state": "standing",
+  "elapsed_s": 33.0,
+  "reset_count": 1,
+  "demo_complete": true,
+  "events": [
+    {
+      "time_s": 0.0,
+      "event": "reset",
+      "state": "standing"
+    },
+    {
+      "time_s": 1.0,
+      "event": "accepted",
+      "state": "sitting_down",
+      "command": "sit"
+    },
+    {
+      "time_s": 3.0,
+      "event": "completed",
+      "state": "sitting",
+      "motion": "sitting_down"
+    },
+    {
+      "time_s": 4.0,
+      "event": "accepted",
+      "state": "standing_up",
+      "command": "stand"
+    },
+    {
+      "time_s": 8.9,
+      "event": "completed",
+      "state": "standing",
+      "motion": "standing_up"
+    },
+    {
+      "time_s": 9.9,
+      "event": "velocity_enter",
+      "state": "velocity_preparing"
+    },
+    {
+      "time_s": 9.9,
+      "event": "velocity_command",
+      "state": "velocity_preparing",
+      "vx": 0.15,
+      "wz": 0.0
+    },
+    {
+      "time_s": 11.9,
+      "event": "velocity_ready",
+      "state": "walking"
+    },
+    {
+      "time_s": 13.9,
+      "event": "velocity_command",
+      "state": "velocity_stopping",
+      "vx": 0.0,
+      "wz": 0.0
+    },
+    {
+      "time_s": 15.9,
+      "event": "velocity_stopped",
+      "state": "velocity_stopping",
+      "distance_m": 0.1974809467792511,
+      "peak_planar_speed": 0.15531885623931885
+    },
+    {
+      "time_s": 18.9,
+      "event": "handoff_complete",
+      "state": "standing",
+      "joint_pose_rms_rad": 0.03752201050519943
+    },
+    {
+      "time_s": 19.9,
+      "event": "accepted",
+      "state": "roll_preparing",
+      "command": "roll"
+    },
+    {
+      "time_s": 21.9,
+      "event": "prepared",
+      "state": "rolling",
+      "joint_pose_rms_rad": 0.0487266480922699
+    },
+    {
+      "time_s": 29.0,
+      "event": "completed",
+      "state": "standing",
+      "motion": "rolling"
+    }
+  ]
+}
