@@ -1,0 +1,242 @@
+{
+  "model_tensor_equality": true,
+  "actor_forward_max_abs_difference": 0.0,
+  "cpu_asset_verification": "passed",
+  "combined": {
+    "state": "standing",
+    "elapsed_s": 33.0,
+    "reset_count": 1,
+    "demo_complete": true,
+    "events": [
+      {
+        "time_s": 0.0,
+        "event": "reset",
+        "state": "standing"
+      },
+      {
+        "time_s": 1.0,
+        "event": "accepted",
+        "state": "sitting_down",
+        "command": "sit"
+      },
+      {
+        "time_s": 3.0,
+        "event": "completed",
+        "state": "sitting",
+        "motion": "sitting_down"
+      },
+      {
+        "time_s": 4.0,
+        "event": "accepted",
+        "state": "standing_up",
+        "command": "stand"
+      },
+      {
+        "time_s": 8.9,
+        "event": "completed",
+        "state": "standing",
+        "motion": "standing_up"
+      },
+      {
+        "time_s": 9.9,
+        "event": "velocity_enter",
+        "state": "velocity_preparing"
+      },
+      {
+        "time_s": 9.9,
+        "event": "velocity_command",
+        "state": "velocity_preparing",
+        "vx": 0.15,
+        "wz": 0.0
+      },
+      {
+        "time_s": 11.9,
+        "event": "velocity_ready",
+        "state": "walking"
+      },
+      {
+        "time_s": 13.9,
+        "event": "velocity_command",
+        "state": "velocity_stopping",
+        "vx": 0.0,
+        "wz": 0.0
+      },
+      {
+        "time_s": 15.9,
+        "event": "velocity_stopped",
+        "state": "velocity_stopping",
+        "distance_m": 0.1974809467792511,
+        "peak_planar_speed": 0.15531885623931885
+      },
+      {
+        "time_s": 18.9,
+        "event": "handoff_complete",
+        "state": "standing",
+        "joint_pose_rms_rad": 0.03752201050519943
+      },
+      {
+        "time_s": 19.9,
+        "event": "accepted",
+        "state": "roll_preparing",
+        "command": "roll"
+      },
+      {
+        "time_s": 21.9,
+        "event": "prepared",
+        "state": "rolling",
+        "joint_pose_rms_rad": 0.0487266480922699
+      },
+      {
+        "time_s": 29.0,
+        "event": "completed",
+        "state": "standing",
+        "motion": "rolling"
+      }
+    ]
+  },
+  "queued_handoffs": {
+    "passed": true,
+    "state": "standing",
+    "reset_count": 1,
+    "elapsed_s": 41.1,
+    "events": [
+      {
+        "time_s": 0.0,
+        "event": "reset",
+        "state": "standing"
+      },
+      {
+        "time_s": 1.0,
+        "event": "velocity_enter",
+        "state": "velocity_preparing"
+      },
+      {
+        "time_s": 1.0,
+        "event": "velocity_command",
+        "state": "velocity_preparing",
+        "vx": 0.15,
+        "wz": 0.0
+      },
+      {
+        "time_s": 3.0,
+        "event": "velocity_ready",
+        "state": "walking"
+      },
+      {
+        "time_s": 5.4,
+        "event": "velocity_command",
+        "state": "velocity_stopping",
+        "vx": 0.0,
+        "wz": 0.0
+      },
+      {
+        "time_s": 5.4,
+        "event": "queued_after_stop",
+        "state": "velocity_stopping",
+        "command": "sit"
+      },
+      {
+        "time_s": 7.4,
+        "event": "velocity_stopped",
+        "state": "velocity_stopping",
+        "distance_m": 0.24559557437896729,
+        "peak_planar_speed": 0.15655280649662018
+      },
+      {
+        "time_s": 10.4,
+        "event": "handoff_complete",
+        "state": "standing",
+        "joint_pose_rms_rad": 0.0332757867872715
+      },
+      {
+        "time_s": 10.4,
+        "event": "accepted",
+        "state": "sitting_down",
+        "command": "sit"
+      },
+      {
+        "time_s": 12.4,
+        "event": "completed",
+        "state": "sitting",
+        "motion": "sitting_down"
+      },
+      {
+        "time_s": 13.4,
+        "event": "accepted",
+        "state": "standing_up",
+        "command": "stand"
+      },
+      {
+        "time_s": 18.3,
+        "event": "completed",
+        "state": "standing",
+        "motion": "standing_up"
+      },
+      {
+        "time_s": 19.3,
+        "event": "velocity_enter",
+        "state": "velocity_preparing"
+      },
+      {
+        "time_s": 19.3,
+        "event": "velocity_command",
+        "state": "velocity_preparing",
+        "vx": 0.0,
+        "wz": 0.5
+      },
+      {
+        "time_s": 21.3,
+        "event": "velocity_ready",
+        "state": "walking"
+      },
+      {
+        "time_s": 23.7,
+        "event": "velocity_command",
+        "state": "velocity_stopping",
+        "vx": 0.0,
+        "wz": 0.0
+      },
+      {
+        "time_s": 23.7,
+        "event": "queued_after_stop",
+        "state": "velocity_stopping",
+        "command": "roll"
+      },
+      {
+        "time_s": 25.7,
+        "event": "velocity_stopped",
+        "state": "velocity_stopping",
+        "distance_m": 0.025821009650826454,
+        "peak_planar_speed": 0.08714327961206436
+      },
+      {
+        "time_s": 29.0,
+        "event": "handoff_complete",
+        "state": "standing",
+        "joint_pose_rms_rad": 0.02747168391942978
+      },
+      {
+        "time_s": 29.0,
+        "event": "accepted",
+        "state": "roll_preparing",
+        "command": "roll"
+      },
+      {
+        "time_s": 31.0,
+        "event": "prepared",
+        "state": "rolling",
+        "joint_pose_rms_rad": 0.04493269696831703
+      },
+      {
+        "time_s": 38.1,
+        "event": "completed",
+        "state": "standing",
+        "motion": "rolling"
+      }
+    ]
+  },
+  "seed": 20261111,
+  "environment": "Existing Python 3.12/CUDA environment with all local modules resolved from this package",
+  "fresh_environment_validation": "pending dependency installation",
+  "gui_validation": "not run (headless tests only)"
+}

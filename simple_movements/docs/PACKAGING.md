@@ -25,3 +25,14 @@ MUJOCO_GL=egl bash test_handoffs.sh
 ```
 
 `validation/source_*.json`是原工作区既有回归；packaged_*.json是发布目录实测，二者分开记录。测试只覆盖给定种子和动作流程，交互GUI需在有图形显示的桌面运行。
+
+## 本包已经完成的验证
+
+- 三个actor逐tensor相等，固定随机输入的原/新网络输出最大绝对差为0。
+- 模型与参考SHA256、相对路径、CPU推理形状及vendor导入来源核对通过。
+- 连续组合流程33.0秒完成，最终standing，仅初始reset一次。
+- 行走中排队坐下、转向中排队翻滚41.1秒完成，最终standing，仅初始reset一次。
+- 原回归与本包结果存在少量物理数值差异，均按各自原始报告保留。GUI未在无窗口验证中打开。
+- 依赖核对中发现mjviser新版会引入mujoco-core4.0.1，已固定原环境的mjviser0.0.14、viser1.0.30及tensordict0.10.0，避免额外MuJoCo核心。
+
+机器可读汇总见 `../validation/packaging_summary.json`。

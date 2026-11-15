@@ -788,12 +788,15 @@ source = { virtual = "." }
 dependencies = [
     { name = "better-actuator-models" },
     { name = "mjlab" },
+    { name = "mjviser" },
     { name = "mujoco" },
     { name = "mujoco-warp" },
     { name = "numpy" },
     { name = "scipy" },
+    { name = "tensordict" },
     { name = "torch", version = "2.9.1", source = { registry = "https://pypi.org/simple" }, marker = "platform_machine != 'aarch64' or sys_platform != 'linux'" },
     { name = "torch", version = "2.9.1+cu129", source = { registry = "https://download.pytorch.org/whl/cu129" }, marker = "platform_machine == 'aarch64' and sys_platform == 'linux'" },
+    { name = "viser" },
     { name = "warp-lang" },
 ]
 
@@ -801,12 +804,15 @@ dependencies = [
 requires-dist = [
     { name = "better-actuator-models", git = "https://github.com/Rhoban/bam.git?rev=62bd8ce12154340be97e06f7f41a0ca8f116d967" },
     { name = "mjlab", specifier = "==1.3.0" },
+    { name = "mjviser", specifier = "==0.0.14" },
     { name = "mujoco", specifier = "==3.10.0" },
     { name = "mujoco-warp", specifier = "==3.8.1" },
     { name = "numpy", specifier = "==2.4.1" },
     { name = "scipy", specifier = ">=1.16" },
+    { name = "tensordict", specifier = "==0.10.0" },
     { name = "torch", marker = "platform_machine != 'aarch64' or sys_platform != 'linux'", specifier = "==2.9.1" },
     { name = "torch", marker = "platform_machine == 'aarch64' and sys_platform == 'linux'", specifier = "==2.9.1", index = "https://download.pytorch.org/whl/cu129" },
+    { name = "viser", specifier = "==1.0.30" },
     { name = "warp-lang", specifier = "==1.12.0" },
 ]
 
@@ -842,18 +848,18 @@ wheels = [
 
 [[package]]
 name = "mjviser"
-version = "0.0.17"
+version = "0.0.14"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "mujoco-core" },
+    { name = "mujoco" },
     { name = "numpy" },
     { name = "pillow" },
     { name = "trimesh" },
     { name = "viser" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/be/cf/bc4c7a36e1ffb58925b2fa30cb10a9b0d40ac227a4dbcaa1d6d683d305a9/mjviser-0.0.17.tar.gz", hash = "sha256:717530280d40eb73fb70792dcec1890176b922b9f7ed3d73a825d89fb3ace78f", size = 38292, upload-time = "2026-11-11T19:11:42.769Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/1d/e4/eef89b279fb1811b5f120a99ac9284c32ff2ca4fad5e6f5c93035f72ba9a/mjviser-0.0.14.tar.gz", hash = "sha256:ebde2203dab89959a13ae549b4d3e5e5cf9eb69de11a1a2fd759cbe8f8c641f3", size = 29576, upload-time = "2026-05-07T03:35:13.128Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/c8/a9/282be843589b71e72ce1a34c6eec8e8db411b3d526e9e721b45a0657baa5/mjviser-0.0.17-py3-none-any.whl", hash = "sha256:b9aa372e8b6721d46a16ca28c0661fdc2182d353df127e70a8d6178eef5ba4aa", size = 41238, upload-time = "2026-11-11T19:11:41.717Z" },
+    { url = "https://files.pythonhosted.org/packages/9c/c2/4534d678ad1b3f7dee6fd83110112800287be21ba007d988abb9ddc8e0ac/mjviser-0.0.14-py3-none-any.whl", hash = "sha256:4b09f8e90506fc4a71d76fc628872147157947e9292428213ab78cfe137c9a26", size = 32296, upload-time = "2026-05-07T03:35:14.252Z" },
 ]
 
 [[package]]
@@ -917,21 +923,6 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/d8/5d/43d1b2b9fe97676e5af03020e132ac497b45a0333a4c61de657d0d52170a/mujoco-3.10.0-cp312-cp312-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:cb7f0d7c148a588f3633020807fc0ec3f3a9aff1f647406e3e0ffe96b05dfd57", size = 19705628, upload-time = "2026-06-22T17:40:22.549Z" },
     { url = "https://files.pythonhosted.org/packages/c3/11/c69199e4123935f98068ab6ab6b35955b4de0f6a91d3f9883805a5789394/mujoco-3.10.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:966d12f88e77e2b188e7530667b519d6963b9b906cff83bab534e5e4279325a0", size = 20904309, upload-time = "2026-06-22T17:40:25.861Z" },
     { url = "https://files.pythonhosted.org/packages/47/13/07bf2550c7dcd69ee8c7fd1f5c400a4ba2e4ede0a29a463ad3ac4cc9da90/mujoco-3.10.0-cp312-cp312-win_amd64.whl", hash = "sha256:708edb5aceee96f2767b1072641523060043b2c67000e39e6e9797addf073696", size = 17865123, upload-time = "2026-06-22T17:40:28.996Z" },
-]
-
-[[package]]
-name = "mujoco-core"
-version = "4.0.1"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "numpy" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/e8/fb/55e0bbfa81dc9f0c1db559813cba914a267f2547c43918c97e4c1597b134/mujoco_core-4.0.1.tar.gz", hash = "sha256:062883cac035b1b3ae6a769cccd155ecc8f06d8c1cb004c33e01d1cb0f0ccf49", size = 1849567, upload-time = "2026-11-11T16:19:55.415Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/64/93/243d260483723230528f38ffe4a1fb71abf01cf42455013e169c5b1c9a04/mujoco_core-4.0.1-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:c9b68ab5bea2557ed6b27b6160beebbb9804dba49b624c2fbb5bc2f5a38262a1", size = 9920947, upload-time = "2026-11-11T16:18:56.089Z" },
-    { url = "https://files.pythonhosted.org/packages/2d/e5/d2ac34f1f4e06fcdd05c1e85741cb2adf5a23642fafe43545113b2d5832d/mujoco_core-4.0.1-cp312-cp312-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:a401eaea5295a29d50c6fdfdb8df8d73c525ab2153751f91c36bd6ccdff95822", size = 8961229, upload-time = "2026-11-11T16:18:58.461Z" },
-    { url = "https://files.pythonhosted.org/packages/f5/b0/7848d860e0a8262cfc6c504affcf9a481f17d198cd00c9ca0bcad32de159/mujoco_core-4.0.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:efbfb6e8f2bd63c5f19473f8093f01696937ef453d647b3c7a92620f5873b845", size = 9684944, upload-time = "2026-11-11T16:19:01.02Z" },
-    { url = "https://files.pythonhosted.org/packages/d6/9e/e7238fdc9ca2f0dd53de15702b3ff16f603ee1148cb4666c5e7a8cdecc01/mujoco_core-4.0.1-cp312-cp312-win_amd64.whl", hash = "sha256:296f4d02b58df353a3fd6fc1b4fcea180c1622660a36b54d547db1ac8d67bc55", size = 8222366, upload-time = "2026-11-11T16:19:03.192Z" },
 ]
 
 [[package]]
@@ -1469,11 +1460,11 @@ wheels = [
 
 [[package]]
 name = "packaging"
-version = "26.3"
+version = "25.0"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/7d/fa/3944b40b07da9ce895c0e6303a5ab7d53da063554f534556b134a54d6093/packaging-26.3.tar.gz", hash = "sha256:94edc256424af38762eb31306eed28beb9f0efc50a8837492c9d6fd6004aed79", size = 313412, upload-time = "2026-08-04T18:15:28.737Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/a1/d4/1fc4078c65507b51b96ca8f8c3ba19e6a61c8253c72794544580a7b6c24d/packaging-25.0.tar.gz", hash = "sha256:d443872c98d677bf60f6a1f2f8c1cb748e8fe762d2bf9d3148b5599295b0fc4f", size = 165727, upload-time = "2025-04-19T11:48:59.673Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/63/34/ba1c580383c9eada3711951fef0795c80b829a078d72188184bcab9dd527/packaging-26.3-py3-none-any.whl", hash = "sha256:d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c", size = 129956, upload-time = "2026-08-04T18:15:27.159Z" },
+    { url = "https://files.pythonhosted.org/packages/20/12/38679034af332785aac8774540895e234f4d07f7545804097de4b666afd8/packaging-25.0-py3-none-any.whl", hash = "sha256:29572ef2b1f17581046b3a2227d5c611fb25ec70ca1ba8554b24b0e69331a484", size = 66469, upload-time = "2025-04-19T11:48:57.875Z" },
 ]
 
 [[package]]
@@ -1734,11 +1725,13 @@ wheels = [
 
 [[package]]
 name = "pyvers"
-version = "0.2.3"
+version = "0.1.0"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/62/21/9daf8da2793d112a04b46ac33ab9046c91b0af8292cd93b3cfdd07ff7169/pyvers-0.2.3.tar.gz", hash = "sha256:c4b81c3a033963245e124cdecb052783c9c4cea3bb08c051833af1c44faa6283", size = 12347, upload-time = "2026-07-09T13:58:07.046Z" }
+dependencies = [
+    { name = "packaging" },
+]
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/2d/8d/63787e8feda59d981ebc953b6581ccab3c97cf7bfe0a6a407c07b50fc86c/pyvers-0.2.3-py3-none-any.whl", hash = "sha256:6f5b5612f2f4bd08caa49baa70fc5f875fc7da701a5385c13e244eea6b8114dd", size = 11757, upload-time = "2026-07-09T13:58:06.078Z" },
+    { url = "https://files.pythonhosted.org/packages/7f/39/c5432f541e6ea1d616dfd6ef42ce02792f7eb42dd44f5ed4439dbe17a58b/pyvers-0.1.0-py3-none-any.whl", hash = "sha256:065249805ae537ddf9a2d1a8dffc6d0a12474a347d2eaa2f35ebdae92c0c8199", size = 10092, upload-time = "2025-06-08T23:46:46.219Z" },
 ]
 
 [[package]]
@@ -1912,7 +1905,7 @@ wheels = [
 
 [[package]]
 name = "tensordict"
-version = "0.14.3"
+version = "0.10.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "cloudpickle" },
@@ -1925,10 +1918,10 @@ dependencies = [
     { name = "torch", version = "2.9.1+cu129", source = { registry = "https://download.pytorch.org/whl/cu129" }, marker = "platform_machine == 'aarch64' and sys_platform == 'linux'" },
 ]
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/99/27/b34d0992b95bf61876d9600ed40c80c1aa4ec01e3611e9e38ac5c0c00e47/tensordict-0.14.3-cp312-cp312-macosx_14_0_arm64.whl", hash = "sha256:36e081a32d2c5a97eb7e785b0b3f4ed0a40c9a4f4aec5ee266059d40d6514063", size = 953100, upload-time = "2026-10-08T13:29:21.374Z" },
-    { url = "https://files.pythonhosted.org/packages/07/4a/f3ef1ef8432693994e86465ccd0de2b67cafd20d50b24a1166a28a95e189/tensordict-0.14.3-cp312-cp312-manylinux_2_28_aarch64.whl", hash = "sha256:f08ee3ff1c8ef02261d609b734734a29e69bc4c890286478182704b8d354d424", size = 596124, upload-time = "2026-10-08T13:29:22.676Z" },
-    { url = "https://files.pythonhosted.org/packages/73/7c/f8d6570ef5b0a859316e38329993ef540fe53ea711234647d2f38d33af5b/tensordict-0.14.3-cp312-cp312-manylinux_2_28_x86_64.whl", hash = "sha256:b5c48a21ee84b83e69f1ff6ac06e371bdc20b01aa2c05af76c7e5020144cb71a", size = 601662, upload-time = "2026-10-08T13:29:23.945Z" },
-    { url = "https://files.pythonhosted.org/packages/b7/07/ebfd04ed0c73db371a51e135d083498b92e342a5452898855853377aac86/tensordict-0.14.3-cp312-cp312-win_amd64.whl", hash = "sha256:46536999c0970d98e11eaf4bbcf238a612617f01d6c2aa407fe354cd920fac99", size = 651362, upload-time = "2026-10-08T13:29:25.62Z" },
+    { url = "https://files.pythonhosted.org/packages/e6/89/2914b6d2796bdbe64ba8d42b568bf02c25673f187079e8795fc668c609fa/tensordict-0.10.0-cp312-cp312-macosx_14_0_arm64.whl", hash = "sha256:f52321ddec5da5acb3b90785c68b4fd4cce805aab6eb700ec59352e9f9e6214f", size = 801519, upload-time = "2025-09-08T10:07:18.954Z" },
+    { url = "https://files.pythonhosted.org/packages/9e/88/2c1bf6c1abdc4d0bfcbdda2d1a5b19c7a9540f67ff6d20fe08d328d78305/tensordict-0.10.0-cp312-cp312-manylinux_2_28_aarch64.whl", hash = "sha256:6a6ba462cc4c04299eb3746e8994df4a625706e60e2dfb88cc5f9513b6cbad2f", size = 445427, upload-time = "2025-09-08T10:07:20.148Z" },
+    { url = "https://files.pythonhosted.org/packages/5e/05/6e7d130c5e9af947fad25fb7d40a3aa2fd9ef9d37c9c7ddc94ba11853d23/tensordict-0.10.0-cp312-cp312-manylinux_2_28_x86_64.whl", hash = "sha256:6f0a52524c7c46778bf250444f1cd508f055735667b8d596a1a7e2fb38824e8c", size = 449961, upload-time = "2025-09-08T10:07:21.977Z" },
+    { url = "https://files.pythonhosted.org/packages/f4/40/877fd0453c9c79a14063ecd21102a23460d033e3760e83eae7fd6c09b3ef/tensordict-0.10.0-cp312-cp312-win_amd64.whl", hash = "sha256:76e7c1d6604addd08e026141c3943fa15fbe36db537f9ff311af5d2caee25daf", size = 494502, upload-time = "2025-09-08T10:07:23.2Z" },
 ]
 
 [[package]]
@@ -2062,14 +2055,14 @@ wheels = [
 
 [[package]]
 name = "trimesh"
-version = "5.2.1"
+version = "4.12.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "numpy" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/66/08/9466d15653d236624149feb1158c441ecee0631e6a629eaf9567e32285b5/trimesh-5.2.1.tar.gz", hash = "sha256:3719598aea815f47ae2d08d02b8009eba3921f05847332df16a7fffd74dcb08e", size = 890304, upload-time = "2026-11-12T17:37:36.849Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/79/37/5cb90f04990260d2caceb6093560c6cefafca1ec522c1e43be01ca658244/trimesh-4.12.2.tar.gz", hash = "sha256:c8ca31571ac00b112e4e160e66a2d4c3491df321f056bd33806be0485d1af9d9", size = 842220, upload-time = "2026-05-01T00:57:43.333Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/e6/97/a6efa2926335bab3f85cf990a5b5f48abd989719b4015df0e3209675adf7/trimesh-5.2.1-py3-none-any.whl", hash = "sha256:ba4b5dbdf030bbffbb6337d9c67595435a8d1f224f23eb6500e9662f42a3c5df", size = 754230, upload-time = "2026-11-12T17:37:34.205Z" },
+    { url = "https://files.pythonhosted.org/packages/05/98/716a473cfb24750858ddd5d14e6527539dd206583a46408d08eeb2844a75/trimesh-4.12.2-py3-none-any.whl", hash = "sha256:b5b5afa63c5272345f2858f7676bc8c217dc8a89f4fadf6193fe10a81b5ff2aa", size = 741043, upload-time = "2026-05-01T00:57:40.763Z" },
 ]
 
 [[package]]
@@ -2148,7 +2141,7 @@ wheels = [
 
 [[package]]
 name = "viser"
-version = "1.1.1"
+version = "1.0.30"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "imageio" },
@@ -2162,9 +2155,9 @@ dependencies = [
     { name = "websockets" },
     { name = "zstandard" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/6a/e5/493ae325f825e9853c2be91b31a35ef8ae54aa229b5082fc8b2372314425/viser-1.1.1.tar.gz", hash = "sha256:0a7ba97dab32b8a7106a2dd216fe1373f2e66e17529b5b43502d33d9b9ac9352", size = 3462064, upload-time = "2026-09-15T08:02:05.297Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/83/9a/85f9a82eac4e067fb1bc34cf4f7865b0d914a3ce91f5b0da47dcef549930/viser-1.0.30.tar.gz", hash = "sha256:6a849a9ef141c97d4ac7bd7d970b81265e6d0130ee8ef1c2e18c0b46aa6b6283", size = 4924612, upload-time = "2026-06-03T16:02:38.552Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/70/6f/6a07b4c90451d6dcd40e1d6e5264f93ff4a03d92c071b1e8a06ec8da5004/viser-1.1.1-py3-none-any.whl", hash = "sha256:f528877553c56e1c01d43b861a1434920a2e7ba4fdc7b2e7ff03721e3c3f5b3d", size = 3623619, upload-time = "2026-09-15T08:02:03.635Z" },
+    { url = "https://files.pythonhosted.org/packages/4a/c9/9a4ca25b505303d5557c98786ac0bf7081c76a7262e1b6c87b899bccc7b8/viser-1.0.30-py3-none-any.whl", hash = "sha256:43089f50acdd45c19b23101c9a2cf8edcc52d052bf7f53ed0b2b6a932c71b5d1", size = 5027789, upload-time = "2026-06-03T16:02:40.331Z" },
 ]
 
 [[package]]
