@@ -22,7 +22,7 @@ from command_encoding import condition
 from environment_variations import bounded_action
 
 DEFAULT_SIT = "models/sitstand_0120.pt"
-DEFAULT_VELOCITY = "models/velocity_0420.pt"
+DEFAULT_VELOCITY = "models/velocity_0470.pt"
 DEFAULT_ROLL = "models/roulade_0380.pt"
 
 

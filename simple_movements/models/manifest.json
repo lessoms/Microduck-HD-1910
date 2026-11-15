@@ -46,6 +46,26 @@
       "parameter_tensors": 21,
       "tensor_equality": true,
       "cpu_forward_max_abs_error": 0.0
+    },
+    {
+      "name": "velocity_0470",
+      "round": 470,
+      "architecture": "old_aligned_velocity_v1",
+      "source_checkpoint": "Control/backward_pitch_v7/short_train/checkpoint_0470.pt",
+      "source_sha256": "a5c30f7b2aa4d27cdedc07e301978dc728b2859d35c79e8f1d30db4dd5897f66",
+      "model": "models/velocity_0470.pt",
+      "model_sha256": "6f3bf9dc1b12c842117f961f489f0086d5fd6c10ed5d07507108d0d54b147110",
+      "model_bytes": 29912390,
+      "reference": "references/velocity_0470.npz",
+      "reference_sha256": "54733b456fd8d99c626ed97471047cc9cdfbbf1e96a98ed854f2eb5b1543bbd1",
+      "parameter_tensors": 21,
+      "tensor_equality": true,
+      "cpu_forward_max_abs_error": 0.0
     }
-  ]
+  ],
+  "defaults": {
+    "velocity": "velocity_0470",
+    "sitstand": "sitstand_0120",
+    "roulade": "roulade_0380"
+  }
 }

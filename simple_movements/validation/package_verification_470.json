@@ -1,0 +1,43 @@
+{
+  "passed": true,
+  "models": [
+    {
+      "name": "velocity_0420",
+      "sha256_verified": true,
+      "output_shape": [
+        2,
+        14
+      ],
+      "finite": true
+    },
+    {
+      "name": "sitstand_0120",
+      "sha256_verified": true,
+      "output_shape": [
+        2,
+        14
+      ],
+      "finite": true
+    },
+    {
+      "name": "roulade_0380",
+      "sha256_verified": true,
+      "output_shape": [
+        2,
+        14
+      ],
+      "finite": true
+    },
+    {
+      "name": "velocity_0470",
+      "sha256_verified": true,
+      "output_shape": [
+        2,
+        14
+      ],
+      "finite": true
+    }
+  ],
+  "policy_import": "src/microduck_sm/policy.py",
+  "robot_import": "vendor/mjlab_microduck/__init__.py"
+}
