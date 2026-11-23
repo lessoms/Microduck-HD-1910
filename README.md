@@ -1,5 +1,11 @@
 # Microduck-HD-1910
 
+## Radxa ZERO 3W 联合模型部署
+
+六种动作的独立 CPU 推理部署包见 [radxa/README.md](radxa/README.md)。[下载完整模型与运行包](https://github.com/lessoms/Microduck-HD-1910/releases/tag/radxa-v1.0.0)，解压后执行 `bash setup.sh`，再运行 `bash run.sh --offline --seconds 3`。无需训练工程、MuJoCo 或 CUDA。
+
+下载后可直接安装并运行模拟硬件测试；真实鸭子运动仍需配置舵机和躯干 IMU 标定、核验板端实时性，再显式启用输出。发布与维护：lessoms。
+
 ## 已训练动作与统一仿真控制
 
 完整模型、运行脚本、机器人资源及训练历程见 [simple_movements](simple_movements/README.md)。

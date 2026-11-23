@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+*.pyc
+combined_model.pt
+*.download
+config.json

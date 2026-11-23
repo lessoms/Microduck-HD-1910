@@ -1,0 +1,41 @@
+{
+  "actor_equivalence": "six actors and flamingo landing_policy exactly matched original PyTorch outputs (FP32, host CPU)",
+  "reference_export": "export_assets.py completed for all six skills using original feature construction",
+  "unit_tests": {
+    "passed": 7,
+    "scope": [
+      "separate action requests",
+      "preserved history",
+      "target delta limit",
+      "velocity expiry",
+      "one-shot broker watchdog",
+      "latched stop",
+      "invalid entry",
+      "stale/nonfinite sensor data",
+      "uncalibrated hardware rejection",
+      "gravity transform",
+      "landing policy presence"
+    ]
+  },
+  "broker_regression_tests": 8,
+  "websocket_integration": "actual Control_Platform broker + mock producer: hello, telemetry, commands, controller feedback and estop latch passed",
+  "webpage": "syntax parsed; 12 action-key mappings executed and checked",
+  "offline_smoke": "75 mock ticks completed",
+  "not_verified": [
+    "Radxa execution and 50 Hz timing",
+    "real HAT serial and IMU nodes",
+    "joint calibration and physical actions",
+    "mouth torque protection equivalence",
+    "camera, ToF and head IMU publishing",
+    "ONNX/RKNN conversion"
+  ],
+  "release_packaging": {
+    "maintainer": "lessoms",
+    "clean_archive_extract": "passed",
+    "model_sha256": "30cb6111d3e00758c52e761061fa56a3c0f0560f7b29011d0253ca24de6fd6bf",
+    "clean_extract_control_tests": 7,
+    "standalone_mock_entry": "passed; 2 seconds on development computer",
+    "arm64_cpu_wheels": "official CPU index checked for cp310/cp311/cp312; not installed on Radxa",
+    "real_motion_verified": false
+  }
+}

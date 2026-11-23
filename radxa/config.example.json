@@ -1,0 +1,199 @@
+{
+  "real_motion_verified": false,
+  "sensor_timeout_s": 0.1,
+  "control_gap_s": 0.1,
+  "entry_joint_error_rad": 0.2,
+  "entry_tilt_error_rad": 0.15,
+  "entry_gyro_rad_s": 0.3,
+  "tracking_tilt_error_rad": 0.6,
+  "max_gyro_rad_s": 12.0,
+  "max_target_delta_rad": 0.03,
+  "blend_ticks": 25,
+  "hardware": {
+    "bus": {
+      "port": "/dev/ttyS2",
+      "baud": 1000000
+    },
+    "body_imu": {
+      "mount_verified": false,
+      "accel_device": "/sys/bus/iio/devices/iio:deviceREPLACE_ACCEL",
+      "gyro_device": "/sys/bus/iio/devices/iio:deviceREPLACE_GYRO",
+      "sensor_to_body": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "gyro_bias_rad_s": [
+        0,
+        0,
+        0
+      ],
+      "correction_tau_s": 1.0
+    },
+    "joints": {
+      "left_hip_yaw": {
+        "verified": false,
+        "id": null,
+        "zero_tick": null,
+        "direction": 1,
+        "ticks_per_rad": null,
+        "speed_rad_s_per_unit": null,
+        "min_rad": -0.4363323129985824,
+        "max_rad": 0.5235987755982988
+      },
+      "left_hip_roll": {
+        "verified": false,
+        "id": null,
+        "zero_tick": null,
+        "direction": 1,
+        "ticks_per_rad": null,
+        "speed_rad_s_per_unit": null,
+        "min_rad": -0.3839724354387525,
+        "max_rad": 0.3839724354387525
+      },
+      "left_hip_pitch": {
+        "verified": false,
+        "id": null,
+        "zero_tick": null,
+        "direction": 1,
+        "ticks_per_rad": null,
+        "speed_rad_s_per_unit": null,
+        "min_rad": -1.570796326795005,
+        "max_rad": 1.5707963267947882
+      },
+      "left_knee": {
+        "verified": false,
+        "id": null,
+        "zero_tick": null,
+        "direction": 1,
+        "ticks_per_rad": null,
+        "speed_rad_s_per_unit": null,
+        "min_rad": -1.570796326795012,
+        "max_rad": 1.570796326794781
+      },
+      "left_ankle": {
+        "verified": false,
+        "id": null,
+        "zero_tick": null,
+        "direction": 1,
+        "ticks_per_rad": null,
+        "speed_rad_s_per_unit": null,
+        "min_rad": -1.5707963267949019,
+        "max_rad": 1.5707963267948912
+      },
+      "neck_pitch": {
+        "verified": false,
+        "id": null,
+        "zero_tick": null,
+        "direction": 1,
+        "ticks_per_rad": null,
+        "speed_rad_s_per_unit": null,
+        "min_rad": -1.5707963267948966,
+        "max_rad": 1.0471975511965976
+      },
+      "head_pitch": {
+        "verified": false,
+        "id": null,
+        "zero_tick": null,
+        "direction": 1,
+        "ticks_per_rad": null,
+        "speed_rad_s_per_unit": null,
+        "min_rad": -1.5707963267948974,
+        "max_rad": 1.5707963267948957
+      },
+      "head_yaw": {
+        "verified": false,
+        "id": null,
+        "zero_tick": null,
+        "direction": 1,
+        "ticks_per_rad": null,
+        "speed_rad_s_per_unit": null,
+        "min_rad": -2.967059728390373,
+        "max_rad": 2.967059728390348
+      },
+      "head_roll": {
+        "verified": false,
+        "id": null,
+        "zero_tick": null,
+        "direction": 1,
+        "ticks_per_rad": null,
+        "speed_rad_s_per_unit": null,
+        "min_rad": -0.43633231299859127,
+        "max_rad": 0.4363323129985735
+      },
+      "right_hip_yaw": {
+        "verified": false,
+        "id": null,
+        "zero_tick": null,
+        "direction": 1,
+        "ticks_per_rad": null,
+        "speed_rad_s_per_unit": null,
+        "min_rad": -0.5235987755982988,
+        "max_rad": 0.4363323129985824
+      },
+      "right_hip_roll": {
+        "verified": false,
+        "id": null,
+        "zero_tick": null,
+        "direction": 1,
+        "ticks_per_rad": null,
+        "speed_rad_s_per_unit": null,
+        "min_rad": -0.3839724354387525,
+        "max_rad": 0.3839724354387525
+      },
+      "right_hip_pitch": {
+        "verified": false,
+        "id": null,
+        "zero_tick": null,
+        "direction": 1,
+        "ticks_per_rad": null,
+        "speed_rad_s_per_unit": null,
+        "min_rad": -1.5707963267949268,
+        "max_rad": 1.5707963267948664
+      },
+      "right_knee": {
+        "verified": false,
+        "id": null,
+        "zero_tick": null,
+        "direction": 1,
+        "ticks_per_rad": null,
+        "speed_rad_s_per_unit": null,
+        "min_rad": -1.570796326794932,
+        "max_rad": 1.570796326794861
+      },
+      "right_ankle": {
+        "verified": false,
+        "id": null,
+        "zero_tick": null,
+        "direction": 1,
+        "ticks_per_rad": null,
+        "speed_rad_s_per_unit": null,
+        "min_rad": -1.5707963267949054,
+        "max_rad": 1.5707963267948877
+      }
+    },
+    "mouth": {
+      "verified": false,
+      "id": null,
+      "zero_tick": null,
+      "direction": 1,
+      "ticks_per_rad": null,
+      "min_rad": 0.0872664626,
+      "max_rad": 0.6108652382,
+      "closing_trip_current_a": null,
+      "max_current_a": null
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "filename": "combined_model.pt",
+  "size": 209370690,
+  "sha256": "30cb6111d3e00758c52e761061fa56a3c0f0560f7b29011d0253ca24de6fd6bf",
+  "url": "https://github.com/lessoms/Microduck-HD-1910/releases/download/radxa-v1.0.0/combined_model.pt",
+  "format": "supermimic-combined-v1",
+  "skills": [
+    "velocity",
+    "sitstand",
+    "roll",
+    "kick",
+    "grasp",
+    "flamingo"
+  ]
+}
