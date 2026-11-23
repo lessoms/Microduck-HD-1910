@@ -1,0 +1,29 @@
+{
+  "format": "pytorch_actor_state_dict",
+  "models": [
+    {
+      "skill": "kick",
+      "model": "models/kick_0420.pt",
+      "model_sha256": "149e3ea797af5c5982cf508b32401b27a9624678736ed59380c985e65ec1fe7f",
+      "model_bytes": 29905818,
+      "tensors": 21,
+      "tensor_equality": true
+    },
+    {
+      "skill": "grasp",
+      "model": "models/grasp_0120.pt",
+      "model_sha256": "fe580e37021ee5aae0d8552958ffce2e69265e944436fbc39c59ca4dbbaa8a71",
+      "model_bytes": 29905845,
+      "tensors": 21,
+      "tensor_equality": true
+    },
+    {
+      "skill": "flamingo",
+      "model": "models/flamingo_0290.pt",
+      "model_sha256": "e0ff7f9857cadaff28806db28b2751abbae6300fa320704bc8bdf3234def1196",
+      "model_bytes": 59811013,
+      "tensors": 42,
+      "tensor_equality": true
+    }
+  ]
+}

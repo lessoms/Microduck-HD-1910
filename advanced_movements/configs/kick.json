@@ -1,0 +1,135 @@
+{
+  "policy": {
+    "target_encoder_hidden": [
+      2048,
+      1024,
+      512,
+      256
+    ],
+    "policy_hidden": [
+      2048,
+      1024,
+      512,
+      256
+    ]
+  },
+  "environment": {
+    "seed": 20261115,
+    "history_frames": 10,
+    "future_offsets": [
+      1,
+      2,
+      5,
+      10,
+      15,
+      20,
+      25,
+      30,
+      40,
+      50
+    ],
+    "raw_action_clip": 1.5707963267948966,
+    "joint_target_margin_rad": 0.02,
+    "max_episode_steps": 200,
+    "termination": {
+      "max_tilt_deg": 55,
+      "minimum_height_m": 0.07,
+      "maximum_encoder_limit_violation_rad": 0.1,
+      "maximum_reference_position_error_m": 0.35
+    },
+    "reward": {
+      "root_position": [
+        0.2,
+        0.05
+      ],
+      "root_orientation": [
+        0.15,
+        0.3
+      ],
+      "root_linear_velocity": [
+        0.15,
+        0.3
+      ],
+      "root_angular_velocity": [
+        0.1,
+        1.0
+      ],
+      "encoder_position": [
+        0.2,
+        0.3
+      ],
+      "encoder_velocity": [
+        0.05,
+        3.0
+      ],
+      "body_position": [
+        0.15,
+        0.05
+      ],
+      "action_l2_penalty": 0.005,
+      "action_delta_l2_penalty": 0.01,
+      "fall_penalty": 1.0,
+      "body_orientation": [
+        0.1,
+        0.3
+      ]
+    },
+    "reset_sampling": {
+      "mode": "adaptive_window",
+      "temperature": 0.15,
+      "hard_probability_cap": 0.4,
+      "ema_alpha": 0.1,
+      "memory_alpha": 0.01,
+      "split_current_difficulty": true
+    },
+    "body_reference_alignment": "robot_xy_yaw",
+    "reference_end": 200,
+    "relative_termination": true,
+    "policy_action_scale": 1.5707963267948966,
+    "stall_penalty": true,
+    "skill": "kick_ball",
+    "reference_phase_cap": 200,
+    "speed_penalty": false,
+    "phase_bounds": [
+      0,
+      50,
+      100,
+      150,
+      200
+    ],
+    "reset_speed_weight": 0.25,
+    "ball_position_noise": 0.015,
+    "ball_reward": {
+      "position": [
+        0.25,
+        0.15
+      ],
+      "velocity": [
+        0.25,
+        0.5
+      ]
+    },
+    "ball_offset": [
+      0.09,
+      -0.042
+    ],
+    "difficulty_score": {
+      "robot_weight": 0.7,
+      "ball_weight": 0.3,
+      "kick_end_frame": 50,
+      "max_initial_ball_speed": 0.05,
+      "minimum_forward_movement_m": 0.03,
+      "failure_frame_score": 0.0,
+      "bin_count": 4,
+      "window_steps": 50
+    },
+    "ball_lateral_penalty": {
+      "weight": 0.25,
+      "scale_m": 0.15,
+      "deadzone_m": 0.02,
+      "minimum_forward_m": 0.03,
+      "forward_ramp_m": 0.03,
+      "start_frame": 25
+    }
+  }
+}

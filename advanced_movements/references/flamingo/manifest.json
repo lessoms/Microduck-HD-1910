@@ -1,0 +1,12 @@
+{
+  "episode_files": [
+    {
+      "file": "teacher_left.npz",
+      "support": "left"
+    },
+    {
+      "file": "teacher_right.npz",
+      "support": "right"
+    }
+  ]
+}

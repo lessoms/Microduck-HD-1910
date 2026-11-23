@@ -1,0 +1,250 @@
+{
+  "schema": {
+    "root_pose": [
+      0,
+      7
+    ],
+    "root_velocity": [
+      7,
+      13
+    ],
+    "joint_position": [
+      13,
+      42
+    ],
+    "joint_velocity": [
+      42,
+      71
+    ],
+    "smoothed_target": [
+      71,
+      85
+    ],
+    "previous_motor_torque": [
+      85,
+      99
+    ],
+    "delay_queue": [
+      99,
+      169
+    ],
+    "delay_lag": [
+      169,
+      170
+    ],
+    "delay_step_count": [
+      170,
+      171
+    ],
+    "delay_phase": [
+      171,
+      172
+    ],
+    "delay_valid_length": [
+      172,
+      173
+    ],
+    "goal_reset_pending": [
+      173,
+      174
+    ],
+    "previous_qfrc_bias": [
+      174,
+      188
+    ],
+    "previous_qfrc_constraint": [
+      188,
+      202
+    ],
+    "previous_qfrc_actuator": [
+      202,
+      216
+    ],
+    "previous_friction_force": [
+      216,
+      230
+    ],
+    "solver_warmstart": [
+      230,
+      271
+    ],
+    "friction_budget": [
+      271,
+      285
+    ],
+    "effective_voltage": [
+      285,
+      286
+    ],
+    "previous_action": [
+      286,
+      300
+    ],
+    "object_pose": [
+      300,
+      307
+    ],
+    "object_velocity": [
+      307,
+      313
+    ],
+    "mouth_baseline": [
+      313,
+      314
+    ],
+    "mouth_armed": [
+      314,
+      315
+    ],
+    "mouth_latched": [
+      315,
+      316
+    ],
+    "mouth_frozen": [
+      316,
+      317
+    ],
+    "mouth_last_torque": [
+      317,
+      318
+    ],
+    "clock": [
+      318,
+      319
+    ],
+    "initial_object_z": [
+      319,
+      320
+    ],
+    "object_peak": [
+      320,
+      321
+    ],
+    "upper_contact_history": [
+      321,
+      322
+    ],
+    "lower_contact_history": [
+      322,
+      323
+    ],
+    "success": [
+      323,
+      324
+    ]
+  },
+  "spec": {
+    "config": {
+      "seed": 20261116
+    },
+    "collection_config": {
+      "seed": 20261116,
+      "history_frames": 10,
+      "future_offsets": [
+        1,
+        2,
+        5,
+        10,
+        15,
+        20,
+        25,
+        30,
+        40,
+        50
+      ],
+      "raw_action_clip": 1.5707963267948966,
+      "joint_target_margin_rad": 0.02,
+      "max_episode_steps": 250,
+      "termination": {
+        "max_tilt_deg": 55,
+        "minimum_height_m": 0.07,
+        "maximum_encoder_limit_violation_rad": 0.1,
+        "maximum_reference_position_error_m": 0.35
+      },
+      "reward": {
+        "root_position": [
+          0.2,
+          0.05
+        ],
+        "root_orientation": [
+          0.15,
+          0.3
+        ],
+        "root_linear_velocity": [
+          0.15,
+          0.3
+        ],
+        "root_angular_velocity": [
+          0.1,
+          1.0
+        ],
+        "encoder_position": [
+          0.2,
+          0.3
+        ],
+        "encoder_velocity": [
+          0.05,
+          3.0
+        ],
+        "body_position": [
+          0.15,
+          0.05
+        ],
+        "action_l2_penalty": 0.005,
+        "action_delta_l2_penalty": 0.01,
+        "fall_penalty": 1.0,
+        "body_orientation": [
+          0.1,
+          0.3
+        ]
+      },
+      "reset_sampling": {
+        "mode": "adaptive_window",
+        "temperature": 0.15,
+        "hard_probability_cap": 0.4,
+        "ema_alpha": 0.1,
+        "memory_alpha": 0.01,
+        "split_current_difficulty": true
+      },
+      "body_reference_alignment": "robot_xy_yaw",
+      "reference_end": 250,
+      "relative_termination": true,
+      "policy_action_scale": 1.5707963267948966,
+      "stall_penalty": true,
+      "skill": "ground_grasp",
+      "reference_phase_cap": 250,
+      "speed_penalty": false,
+      "phase_bounds": [
+        0,
+        50,
+        100,
+        150,
+        200,
+        250
+      ],
+      "reset_speed_weight": 0.25,
+      "difficulty_score": {
+        "robot_weight": 0.7,
+        "object_weight": 0.3,
+        "bin_count": 5,
+        "window_steps": 50,
+        "failure": "failure to exceed .16m contributes to object difficulty; separate from torque protection"
+      },
+      "object_reward": {
+        "progress_total_reward": 36.0,
+        "first_success_reward": 54.0,
+        "episode_failure_penalty": 18.0,
+        "progress_height_cap_m": 0.16,
+        "require_both_beak_contacts": true,
+        "progress": "positive increments of episode historical maximum lift after both contacts; capped once per episode",
+        "success": "strict >.16m after both contacts; bonus once per episode",
+        "failure": "deduct once at episode end if success never occurred",
+        "post_success_drop_penalty": 0.0,
+        "push_away_penalty": 0.0,
+        "scale_relative_to_previous_proposal": 18.0,
+        "latest_adjustment_multiplier": 15.0,
+        "status": "used by the grasp environment and imagined rollouts"
+      }
+    }
+  }
+}

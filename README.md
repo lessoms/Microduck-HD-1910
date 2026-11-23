@@ -23,3 +23,11 @@ bash run.sh
 | **前滚翻与起身**<br>![前滚翻与起身：MuJoCo 实际策略运行](simple_movements/media/gifs/roulade.gif)<br>[MP4 原视频](simple_movements/media/videos/roulade.mp4) | |
 
 [完整训练与实现历程](simple_movements/README.md)
+
+## 进阶动作
+
+右脚踢球、嘴部夹取和单脚站立的策略权重、MuJoCo 运行入口与演示视频见 [advanced_movements](advanced_movements/README.md)。
+
+```bash
+bash advanced_movements/run.sh
+```
